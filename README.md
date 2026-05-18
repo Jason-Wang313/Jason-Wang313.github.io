@@ -28,7 +28,7 @@ If you later decide to use `main`, first compare `codex-version` against any `cl
 index.html        — Main single-page site
 cv.html           — Standalone academic CV
 css/style.css     — All styles
-js/particles.js   — Hero particle animation (Canvas 2D)
+assets/hero-world-models-warm.png — Original generated hero illustration
 js/main.js        — Rotating text, navbar, scroll, fade-ins
 assets/favicon.svg — Favicon placeholder
 ```
