@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Z Wang — Academic CV</title>
+  <style>
+    :root {
+      --ink: #161616;
+      --muted: #626262;
+      --soft: #f6f3ee;
+      --line: #ddd7cc;
+      --accent: #8a3ffc;
+      --accent-dark: #4b20a8;
+      --paper: #fffdf9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ece8df;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.42;
+    }
+
+    .page {
+      width: 980px;
+      min-height: 1380px;
+      margin: 40px auto;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.13);
+      border: 1px solid var(--line);
+      padding: 58px 68px 64px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: start;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 28px;
+      margin-bottom: 34px;
+    }
+
+    .name {
+      margin: 0 0 8px;
+      font-size: 42px;
+      letter-spacing: 0.04em;
+      font-variant: small-caps;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .summary {
+      font-size: 18px;
+      max-width: 560px;
+      margin: 0;
+    }
+
+    .contact {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.75;
+      text-align: right;
+      color: var(--muted);
+      padding-top: 7px;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(138, 63, 252, 0.35);
+    }
+
+    a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 255px 1fr;
+      gap: 42px;
+    }
+
+    .side {
+      border-right: 1px solid var(--line);
+      padding-right: 30px;
+    }
+
+    .section {
+      margin-bottom: 34px;
+    }
+
+    .section-title {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 0 0 16px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side .section-title {
+      color: var(--accent-dark);
+    }
+
+    .pillbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .pill {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 12px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      color: #333;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, rgba(138, 63, 252, 0.09), rgba(138, 63, 252, 0.02));
+      border: 1px solid rgba(138, 63, 252, 0.18);
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      margin-bottom: 12px;
+    }
+
+    .highlight strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .highlight span {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .date {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      padding-top: 3px;
+      text-align: right;
+    }
+
+    .role {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0 0 2px;
+    }
+
+    .place {
+      font-size: 16px;
+      margin: 0 0 5px;
+    }
+
+    .desc {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 13.5px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .focus-card {
+      background: #faf6ef;
+      border: 1px solid rgba(138, 63, 252, 0.22);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 18px 18px 0;
+      padding: 18px 20px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.045);
+    }
+
+    .key {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+      color: var(--accent-dark);
+      background: transparent;
+      border-bottom: 1px solid rgba(138, 63, 252, 0.35);
+      border-radius: 0;
+      padding: 0;
+    }
+
+    .pub {
+      position: relative;
+      padding: 18px 18px 17px 22px;
+      border-left: 3px solid var(--accent);
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+      border-radius: 0 14px 14px 0;
+      margin-bottom: 16px;
+    }
+
+    .pub-label {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .pub-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .authors {
+      font-size: 14px;
+      color: #343434;
+      margin-bottom: 5px;
+    }
+
+    .venue {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .links {
+      margin-top: 10px;
+      font-family: Inter, Arial, sans-serif;
+      font-size: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .link-button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: var(--soft);
+      color: var(--accent-dark);
+    }
+
+    .award-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .award-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .award-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+
+    .note {
+      font-family: Inter, Arial, sans-serif;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        padding: 36px 44px;
+      }
+
+      a {
+        color: var(--ink);
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div>
+        <h1 class="name">Jason Z Wang</h1>
+        <div class="subtitle"><a href="https://www.undergraduate.study.cam.ac.uk/courses/computer-science-ba-hons-meng">Computer Science · University of Cambridge</a></div>
+        <p class="summary">
+          My research interests center on adaptive physical world models that compose known mechanisms, detect incomplete understanding, actively gather evidence, learn new physical components, and update without forgetting—so embodied agents can generalize beyond passive data and act reliably in the open world.
+        </p>
+      </div>
+      <div class="contact">
+        Cambridge, United Kingdom<br />
+        <a href="mailto:jasonhearlte@gmail.com">jasonhearlte@gmail.com</a><br />
+        <a href="https://github.com/Jason-Wang313">github.com/Jason-Wang313</a><br />
+        <a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&hl=en">Google Scholar</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="side">
+        <section class="section">
+          <h2 class="section-title">Future Direction</h2>
+          <div class="pillbox">
+            <span class="pill">Physical World Models</span>
+            <span class="pill">Embodied AI</span>
+            <span class="pill">Robot Learning</span>
+            <span class="pill">Compositional Generalization</span>
+            <span class="pill">Object-Centric Representations</span>
+            <span class="pill">Energy-Based Inference</span>
+            <span class="pill">Test-Time Planning</span>
+            <span class="pill">Novelty Detection</span>
+            <span class="pill">Active Exploration</span>
+            <span class="pill">Continual Learning</span>
+            <span class="pill">Sim-to-Real Adaptation</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Previous Work</h2>
+          <div class="pillbox">
+            <span class="pill">AI Safety</span>
+            <span class="pill">Alignment</span>
+            <span class="pill">Benchmark Design</span>
+            <span class="pill">Theoretical ML</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Highlights</h2>
+          <div class="highlight">
+            <strong>Cambridge CS</strong>
+            <span>Ranked 1/128</span>
+          </div>
+          <div class="highlight">
+            <strong><a href="https://matsprogram.org/">MATS Mentee</a></strong>
+            <span>Mentored by <a href="https://yoshuabengio.org/">Yoshua Bengio</a></span>
+          </div>
+          <div class="highlight">
+            <strong>NeurIPS Paper</strong>
+            <span>Published prior to university matriculation</span>
+          </div>
+          <div class="highlight">
+            <strong>IMO Team</strong>
+            <span>National team member, 2024</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Technical</h2>
+          <div class="pillbox">
+            <span class="pill">Python</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">Theoretical ML</span>
+          </div>
+        </section>
+      </aside>
+
+      <section class="main">
+        <section class="section">
+          <h2 class="section-title">Research Direction</h2>
+          <div class="focus-card">
+            <p class="desc" style="font-size: 14.8px; color: #343434;">
+              I have moved from earlier work in AI safety, alignment, benchmark design, and theoretical ML toward a <span class="key">new research agenda</span> centered on <span class="key">physical world models</span> and <span class="key">embodied intelligence</span>. My long-term research goal is to build <span class="key">adaptive physical world models</span> that can <strong>compose known mechanisms</strong>, <strong>identify missing physical concepts</strong>, <strong>actively gather evidence</strong>, and <strong>continually update</strong> for <span class="key">robust open-world robot generalization</span>.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="item">
+            <div class="date">2025–Present</div>
+            <div>
+              <p class="role">B.A. Computer Science</p>
+              <p class="place"><a href="https://www.undergraduate.study.cam.ac.uk/?ucam-ref=global-header">University of Cambridge</a></p>
+              <p class="desc">Ranking: 1/128.<br />Courses: Discrete Mathematics, Continuous Mathematics, Programming, Operating Systems, Hardware, Machine Learning.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Research Experience</h2>
+          <div class="item">
+            <div class="date">2026–Present</div>
+            <div>
+              <p class="role"><a href="https://matsprogram.org/">MATS Mentee</a></p>
+              <p class="place">Mentored by <a href="https://yoshuabengio.org/">Yoshua Bengio</a>, A.M. Turing Award Recipient and most-cited AI researcher</p>
+              <p class="desc">Research areas: Agent Foundations, Monitoring, Control, Red-Teaming, Scalable Oversight, and Dangerous Capability Evaluations.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="date">2024</div>
+            <div>
+              <p class="role">Machine Learning Researcher</p>
+              <p class="place"><a href="https://constellation.org/programs/astra">Astra Fellowship</a> — Mentored by <a href="https://owainevans.github.io/">Owain Evans</a>, Affiliate Researcher at CHAI, UC Berkeley</p>
+              <p class="desc">Research areas: Situational Awareness, AI Safety Evaluation, Deceptive Alignment, and Self-Knowledge.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Selected Publications</h2>
+
+          <article class="pub">
+            <div class="pub-label">Peer-reviewed · NeurIPS 2024</div>
+            <div class="pub-title">Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs</div>
+            <div class="authors">Rudolf Laine, Bilal Chughtai, Jan Betley, Kaivalya Hariharan, Jeremy Scheurer, Mikita Balesni, Marius Hobbhahn, Alexander Meinke, Owain Evans, <strong>Jason Z Wang</strong></div>
+            <div class="venue"><em>Advances in Neural Information Processing Systems</em> 37, 64010–64118.</div>
+          </article>
+
+          <article class="pub">
+            <div class="pub-label">Preprint · arXiv:2604.19809</div>
+            <div class="pub-title"><a href="https://arxiv.org/pdf/2604.19809">MIRROR: A Hierarchical Benchmark for Metacognitive Calibration in Large Language Models</a></div>
+            <div class="authors"><strong>Jason Z Wang</strong></div>
+            <div class="venue">Preprint, 2026.</div>
+            <div class="links">
+              <a class="link-button" href="https://arxiv.org/pdf/2604.19809">PDF</a>
+              <a class="link-button" href="https://arxiv.org/abs/2604.19809">arXiv</a>
+            </div>
+          </article>
+
+          <article class="pub">
+            <div class="pub-label">Preprint · arXiv:2604.12951</div>
+            <div class="pub-title"><a href="https://arxiv.org/pdf/2604.12951">The Verification Tax: Fundamental Limits of AI Auditing in the Rare-Error Regime</a></div>
+            <div class="authors"><strong>Jason Z Wang</strong></div>
+            <div class="venue">Preprint, 2026.</div>
+            <div class="links">
+              <a class="link-button" href="https://arxiv.org/pdf/2604.12951">PDF</a>
+              <a class="link-button" href="https://arxiv.org/abs/2604.12951">arXiv</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Awards & Honors</h2>
+          <ul class="award-list">
+            <li>Member of national IMO team, 2024.</li>
+            <li>MATS mentee under <a href="https://yoshuabengio.org/">Yoshua Bengio</a>.</li>
+            <li>NeurIPS publication during gap year before university.</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
