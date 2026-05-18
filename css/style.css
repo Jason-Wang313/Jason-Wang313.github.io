@@ -140,7 +140,7 @@ strong {
   color: var(--cream);
   background:
     linear-gradient(90deg, rgba(26, 20, 12, 0.68) 0%, rgba(58, 38, 19, 0.36) 42%, rgba(255, 244, 225, 0.06) 72%),
-    url("../assets/hero-embodied-table.png") center center / cover no-repeat,
+    url("../assets/hero-embodied-table.png?v=20260518-hero-table") center center / cover no-repeat,
     #4b361f;
 }
 
@@ -605,7 +605,7 @@ strong {
     padding: 86px 22px 122px;
     background:
       linear-gradient(90deg, rgba(28, 20, 12, 0.74), rgba(78, 52, 27, 0.48)),
-      url("../assets/hero-embodied-table.png") 64% center / cover no-repeat,
+      url("../assets/hero-embodied-table.png?v=20260518-hero-table") 64% center / cover no-repeat,
       #4b361f;
   }
 
