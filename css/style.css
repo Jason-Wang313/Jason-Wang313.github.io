@@ -139,17 +139,17 @@ strong {
   padding: 138px 32px 82px;
   color: var(--cream);
   background:
-    linear-gradient(90deg, rgba(31, 19, 8, 0.62) 0%, rgba(70, 42, 17, 0.28) 36%, rgba(139, 91, 39, 0.08) 72%),
-    url("../assets/hero-creation-adam-robotics.png") center center / cover no-repeat,
-    #9a7444;
+    linear-gradient(90deg, rgba(58, 34, 12, 0.48) 0%, rgba(126, 79, 30, 0.18) 36%, rgba(255, 221, 149, 0.03) 72%),
+    url("../assets/hero-creation-adam-robotics-positive.png") center center / cover no-repeat,
+    #d9b56f;
 }
 
 .hero__shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(25, 16, 8, 0.1), rgba(25, 16, 8, 0.3)),
-    radial-gradient(circle at 16% 32%, rgba(58, 34, 14, 0.38), transparent 34%);
+    linear-gradient(180deg, rgba(69, 43, 17, 0.03), rgba(69, 43, 17, 0.18)),
+    radial-gradient(circle at 16% 32%, rgba(88, 52, 17, 0.28), transparent 34%);
   pointer-events: none;
 }
 
@@ -316,7 +316,6 @@ strong {
 }
 
 .highlights span,
-.project-table span,
 .pub-badge {
   display: block;
   margin-bottom: 12px;
@@ -332,15 +331,28 @@ strong {
   line-height: 1.28;
 }
 
-.highlights a {
-  color: var(--ink);
-  border-bottom: 1px solid rgba(37, 32, 21, 0.25);
+.prose a,
+.highlights a,
+.timeline a,
+.publication-list a,
+.contact-links a {
+  color: #0f766e;
+  border-bottom: 2px solid rgba(15, 118, 110, 0.34);
+  font-weight: 800;
+}
+
+.prose a:hover,
+.highlights a:hover,
+.timeline a:hover,
+.publication-list a:hover,
+.contact-links a:hover {
+  color: #bd7b2f;
+  border-bottom-color: rgba(189, 123, 47, 0.52);
 }
 
 .research-section,
 .publication-section,
-.timeline-section,
-.projects-section {
+.timeline-section {
   border-top: 1px solid var(--line);
 }
 
@@ -466,9 +478,7 @@ strong {
   margin-top: 12px;
 }
 
-.inline-links a,
-.project-table a,
-.todo {
+.inline-links a {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
@@ -478,50 +488,9 @@ strong {
   font-weight: 800;
 }
 
-.inline-links a,
-.project-table a {
+.inline-links a {
   color: #245d58;
   background: var(--teal-soft);
-}
-
-.project-table {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1px;
-  margin-top: 40px;
-  border: 1px solid var(--line);
-  background: var(--line);
-}
-
-.project-table article {
-  min-height: 230px;
-  display: flex;
-  flex-direction: column;
-  padding: 22px;
-  background: var(--panel);
-}
-
-.project-table h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  line-height: 1.28;
-}
-
-.project-table p {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.project-table a,
-.project-table .todo {
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-.todo {
-  color: var(--quiet);
-  background: #efe1c7;
 }
 
 .contact-section {
@@ -589,8 +558,7 @@ strong {
 }
 
 @media (max-width: 1120px) {
-  .highlights,
-  .project-table {
+  .highlights {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -636,9 +604,9 @@ strong {
     min-height: 100svh;
     padding: 86px 22px 122px;
     background:
-      linear-gradient(90deg, rgba(28, 17, 8, 0.72), rgba(84, 51, 21, 0.38)),
-      url("../assets/hero-creation-adam-robotics.png") 44% center / cover no-repeat,
-      #9a7444;
+      linear-gradient(90deg, rgba(82, 50, 18, 0.56), rgba(155, 95, 37, 0.26)),
+      url("../assets/hero-creation-adam-robotics-positive.png") 42% center / cover no-repeat,
+      #d9b56f;
   }
 
   .hero__inner {
@@ -710,13 +678,8 @@ strong {
     font-size: 16px;
   }
 
-  .highlights,
-  .project-table {
+  .highlights {
     grid-template-columns: 1fr;
-  }
-
-  .project-table article {
-    min-height: 0;
   }
 }
 
