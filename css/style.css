@@ -134,22 +134,22 @@ strong {
   position: relative;
   min-height: 100vh;
   display: grid;
-  align-items: center;
+  align-items: start;
   overflow: hidden;
-  padding: 112px 32px 82px;
+  padding: 138px 32px 82px;
   color: var(--cream);
   background:
-    linear-gradient(90deg, rgba(21, 14, 7, 0.7) 0%, rgba(66, 42, 18, 0.38) 35%, rgba(115, 74, 29, 0.14) 70%),
-    url("../assets/hero-last-supper-robotics.png") center center / cover no-repeat,
-    #8a6336;
+    linear-gradient(90deg, rgba(31, 19, 8, 0.62) 0%, rgba(70, 42, 17, 0.28) 36%, rgba(139, 91, 39, 0.08) 72%),
+    url("../assets/hero-creation-adam-robotics.png") center center / cover no-repeat,
+    #9a7444;
 }
 
 .hero__shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(25, 16, 8, 0.13), rgba(25, 16, 8, 0.26)),
-    radial-gradient(circle at 18% 52%, rgba(58, 34, 14, 0.35), transparent 38%);
+    linear-gradient(180deg, rgba(25, 16, 8, 0.1), rgba(25, 16, 8, 0.3)),
+    radial-gradient(circle at 16% 32%, rgba(58, 34, 14, 0.38), transparent 34%);
   pointer-events: none;
 }
 
@@ -158,6 +158,7 @@ strong {
   z-index: 1;
   width: min(100%, var(--max));
   margin: 0 auto;
+  padding-top: 34px;
 }
 
 .eyebrow,
@@ -633,16 +634,17 @@ strong {
 
   .hero {
     min-height: 100svh;
-    padding: 98px 22px 122px;
+    padding: 86px 22px 122px;
     background:
-      linear-gradient(90deg, rgba(28, 17, 8, 0.74), rgba(84, 51, 21, 0.48)),
-      url("../assets/hero-last-supper-robotics.png") 50% center / cover no-repeat,
-      #8a6336;
+      linear-gradient(90deg, rgba(28, 17, 8, 0.72), rgba(84, 51, 21, 0.38)),
+      url("../assets/hero-creation-adam-robotics.png") 44% center / cover no-repeat,
+      #9a7444;
   }
 
   .hero__inner {
     min-width: 0;
     max-width: 100%;
+    padding-top: 120px;
   }
 
   .hero h1 {
