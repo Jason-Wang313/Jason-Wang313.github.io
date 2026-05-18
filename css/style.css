@@ -139,9 +139,9 @@ strong {
   padding: 138px 32px 82px;
   color: var(--cream);
   background:
-    linear-gradient(90deg, rgba(31, 25, 14, 0.58) 0%, rgba(70, 48, 24, 0.28) 38%, rgba(255, 244, 225, 0.1) 68%),
-    url("../assets/hero-world-models-warm.png") center center / cover no-repeat,
-    #cfae7f;
+    linear-gradient(90deg, rgba(26, 20, 12, 0.68) 0%, rgba(58, 38, 19, 0.36) 42%, rgba(255, 244, 225, 0.06) 72%),
+    url("../assets/hero-embodied-table.png") center center / cover no-repeat,
+    #4b361f;
 }
 
 .hero__shade {
@@ -604,9 +604,9 @@ strong {
     min-height: 100svh;
     padding: 86px 22px 122px;
     background:
-      linear-gradient(90deg, rgba(35, 25, 13, 0.68), rgba(84, 57, 28, 0.42)),
-      url("../assets/hero-world-models-warm.png") 58% center / cover no-repeat,
-      #cfae7f;
+      linear-gradient(90deg, rgba(28, 20, 12, 0.74), rgba(78, 52, 27, 0.48)),
+      url("../assets/hero-embodied-table.png") 64% center / cover no-repeat,
+      #4b361f;
   }
 
   .hero__inner {
