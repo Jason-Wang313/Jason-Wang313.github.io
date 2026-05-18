@@ -28,7 +28,7 @@ If you later decide to use `main`, first compare `codex-version` against any `cl
 index.html        — Main single-page site
 cv.html           — Standalone academic CV
 css/style.css     — All styles
-assets/hero-creation-adam-robotics-positive.png — Original generated positive robotics Creation of Adam hero illustration
+assets/hero-world-models-warm.png — Original generated warm robotics world-model hero illustration
 js/main.js        — Rotating text, navbar, scroll, fade-ins
 assets/favicon.svg — Favicon placeholder
 ```
