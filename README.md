@@ -4,6 +4,8 @@ Personal academic website for Jason Z Wang, Computer Science student at the Univ
 
 Live at: [jason-wang313.github.io](https://jason-wang313.github.io)
 
+This `codex-version` branch uses a separate homepage layout, CSS system, and canvas animation from the baseline `main` site so it can be compared cleanly against other agent versions.
+
 ## Branch safety
 
 This Codex implementation is intended to live on the `codex-version` branch only. Do not merge or overwrite a separate `claude-version` branch without an explicit review step.

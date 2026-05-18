@@ -3,355 +3,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Z Wang | Computer Science Researcher</title>
-  <meta name="description" content="Jason Z Wang is a Computer Science student at the University of Cambridge researching physical world models, embodied intelligence, and robot learning.">
+  <title>Jason Z Wang | Cambridge CS & ML Research</title>
+  <meta name="description" content="Academic website for Jason Z Wang, a Cambridge Computer Science student researching adaptive physical world models, embodied AI, robot learning, and open-world generalization.">
   <meta name="author" content="Jason Z Wang">
-  <meta name="theme-color" content="#0a0e1a">
+  <meta name="theme-color" content="#070b14">
   <link rel="canonical" href="https://jason-wang313.github.io/">
 
-  <meta property="og:title" content="Jason Z Wang | Computer Science Researcher">
-  <meta property="og:description" content="Computer Science at Cambridge. Researching physical world models and embodied intelligence.">
+  <meta property="og:title" content="Jason Z Wang | Cambridge CS & ML Research">
+  <meta property="og:description" content="Computer Science at Cambridge. Research interests in physical world models, embodied AI, robot learning, and open-world generalization.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jason-wang313.github.io">
+  <meta property="og:url" content="https://jason-wang313.github.io/">
+  <meta property="og:site_name" content="Jason Z Wang">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Jason Z Wang | Computer Science Researcher">
-  <meta name="twitter:description" content="Computer Science at Cambridge. Researching physical world models and embodied intelligence.">
+  <meta name="twitter:title" content="Jason Z Wang | Cambridge CS & ML Research">
+  <meta name="twitter:description" content="Cambridge CS student and ML researcher working toward adaptive physical world models and embodied intelligence.">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Jason Z Wang home">
+      <span class="brand__mark">JZW</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="#hero" class="navbar__logo">JZW</a>
-      <button class="navbar__toggle" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="navbar__links">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="cv.html" target="_blank" rel="noopener">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <canvas class="world-canvas" id="world-canvas" aria-hidden="true"></canvas>
+    <div class="hero__shade" aria-hidden="true"></div>
 
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <canvas id="particle-canvas"></canvas>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <h1 class="hero__name">Jason Z Wang</h1>
-      <p class="hero__affiliation">Computer Science &middot; University of Cambridge</p>
-      <div class="hero__rotating">
-        <span class="hero__rotating-label">Research interests in</span>
-        <span class="hero__rotating-wrapper">
-          <span class="hero__rotating-text" id="rotating-text">Physical World Models</span>
-        </span>
-      </div>
-      <div class="hero__cta">
-        <a href="cv.html" target="_blank" rel="noopener" class="btn btn--primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          CV
-        </a>
-        <a href="https://github.com/Jason-Wang313" target="_blank" rel="noopener" class="btn btn--outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn--outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-          Google Scholar
-        </a>
-        <a href="mailto:jasonhearlte@gmail.com" class="btn btn--outline">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email
-        </a>
+    <div class="hero__inner">
+      <p class="eyebrow">Cambridge CS · Machine Learning Research</p>
+      <h1 id="hero-title">Jason Z Wang</h1>
+      <p class="hero__subtitle">Computer Science · <span>University of Cambridge</span></p>
+      <p class="hero__rotation">
+        <span>Research interests in</span>
+        <strong id="rotating-interest">Physical World Models</strong>
+      </p>
+
+      <div class="hero__actions" aria-label="Profile links">
+        <a class="action action--primary" href="cv.html">CV</a>
+        <a class="action" href="https://github.com/Jason-Wang313" target="_blank" rel="noopener">GitHub</a>
+        <a class="action" href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="action" href="mailto:jasonhearlte@gmail.com">Email</a>
       </div>
     </div>
-    <div class="hero__scroll">
-      <span>Scroll</span>
-      <div class="hero__scroll-arrow"></div>
+
+    <div class="hero__footer" aria-label="Research summary">
+      <span>adaptive models</span>
+      <span>open-world evidence</span>
+      <span>robot generalization</span>
     </div>
   </section>
 
   <main>
-    <!-- About -->
-    <section class="section section--light" id="about">
-      <div class="container">
-        <h2 class="section__title fade-in">About</h2>
-        <div class="about__grid fade-in">
-          <div class="about__text">
-            <p>I am a Computer Science student at the University of Cambridge interested in adaptive physical world models, embodied AI, compositional generalization, novelty detection, active exploration, continual learning, and sim-to-real robot adaptation.</p>
-            <p>Ranked 1st out of 128 students in my cohort, I am transitioning from earlier research in AI safety, alignment, benchmark design, and theoretical ML toward a new agenda centered on physical world models and embodied intelligence.</p>
-          </div>
-          <div class="about__details">
-            <div class="about__detail">
-              <span class="about__label">Location</span>
-              <span class="about__value">Cambridge, UK</span>
-            </div>
-            <div class="about__detail">
-              <span class="about__label">Affiliation</span>
-              <span class="about__value">University of Cambridge</span>
-            </div>
-            <div class="about__detail">
-              <span class="about__label">Focus</span>
-              <span class="about__value">Physical World Models &amp; Embodied AI</span>
-            </div>
-            <div class="about__detail">
-              <span class="about__label">Ranking</span>
-              <span class="about__value">1st / 128</span>
-            </div>
-          </div>
+    <section class="section intro-section" id="about">
+      <div class="section__grid">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2>Adaptive intelligence for the physical world.</h2>
         </div>
+        <div class="prose reveal">
+          <p>I am a Computer Science student at the University of Cambridge interested in adaptive physical world models, embodied AI, compositional generalization, novelty detection, active exploration, continual learning, and sim-to-real robot adaptation.</p>
+          <p>My current research direction builds on earlier work in AI safety, alignment, benchmark design, and theoretical ML, with a transition toward physical world models and embodied intelligence. I am ranked 1/128 in Cambridge Computer Science.</p>
+        </div>
+      </div>
+
+      <div class="highlights reveal" aria-label="Selected highlights">
+        <article>
+          <span>Cambridge CS</span>
+          <strong>Ranked 1/128</strong>
+        </article>
+        <article>
+          <span>MATS Mentee</span>
+          <strong>Mentored by Yoshua Bengio</strong>
+        </article>
+        <article>
+          <span>NeurIPS 2024 Publication</span>
+          <strong>Published before university matriculation</strong>
+        </article>
+        <article>
+          <span><a href="https://www.imo-official.org/" target="_blank" rel="noopener">International Mathematical Olympiad</a></span>
+          <strong>Member of national IMO team, 2024</strong>
+        </article>
       </div>
     </section>
 
-    <!-- Research Agenda -->
-    <section class="section section--alt" id="research">
-      <div class="container">
-        <h2 class="section__title fade-in">Research Agenda</h2>
-        <div class="research__focus fade-in">
-          <p>My long-term research goal is to build <strong>adaptive physical world models</strong> that can <strong>compose known mechanisms</strong>, <strong>identify missing physical concepts</strong>, <strong>actively gather evidence</strong>, and <strong>continually update</strong> for robust open-world robot generalization.</p>
-          <p>I have moved from earlier work in AI safety, alignment, benchmark design, and theoretical ML toward a new research agenda centered on physical world models and embodied intelligence.</p>
+    <section class="section research-section" id="research">
+      <div class="section__grid">
+        <div>
+          <p class="section-kicker">Research Agenda</p>
+          <h2>Composing mechanisms, detecting novelty, and learning from evidence.</h2>
         </div>
+        <div class="agenda reveal">
+          <p>My long-term research goal is to build adaptive physical world models that can compose known mechanisms, identify missing physical concepts, actively gather evidence, and continually update for robust open-world robot generalization.</p>
+        </div>
+      </div>
 
-        <h3 class="section__subtitle fade-in">Current Research Interests</h3>
-        <div class="tag-cloud fade-in">
-          <span class="tag tag--primary">Physical World Models</span>
-          <span class="tag tag--primary">Embodied AI</span>
-          <span class="tag tag--primary">Robot Learning</span>
-          <span class="tag tag--primary">Compositional Generalization</span>
-          <span class="tag tag--primary">Object-Centric Representations</span>
-          <span class="tag tag--primary">Energy-Based Inference</span>
-          <span class="tag tag--primary">Inference-Time Planning</span>
-          <span class="tag tag--primary">Novelty / OOD Detection</span>
-          <span class="tag tag--primary">Active Exploration</span>
-          <span class="tag tag--primary">Continual Learning</span>
-          <span class="tag tag--primary">Sim-to-Real Adaptation</span>
-        </div>
-
-        <h3 class="section__subtitle fade-in">Previous Work</h3>
-        <div class="tag-cloud fade-in">
-          <span class="tag tag--secondary">AI Safety</span>
-          <span class="tag tag--secondary">Alignment</span>
-          <span class="tag tag--secondary">Benchmark Design</span>
-          <span class="tag tag--secondary">Theoretical ML</span>
-          <span class="tag tag--secondary">LLM Evaluation</span>
-          <span class="tag tag--secondary">Metacognitive Calibration</span>
-          <span class="tag tag--secondary">Rare-Error Auditing</span>
-        </div>
+      <div class="research-columns reveal">
+        <article>
+          <h3>Current Interests</h3>
+          <div class="tag-list">
+            <span>Physical World Models</span>
+            <span>Embodied AI</span>
+            <span>Robot Learning</span>
+            <span>Compositional Generalization</span>
+            <span>Object-Centric Representations</span>
+            <span>Energy-Based Inference</span>
+            <span>Inference-Time Planning</span>
+            <span>Novelty/OOD Detection</span>
+            <span>Active Exploration</span>
+            <span>Continual Learning</span>
+            <span>Sim-to-Real Adaptation</span>
+          </div>
+        </article>
+        <article>
+          <h3>Previous Work</h3>
+          <div class="tag-list tag-list--quiet">
+            <span>AI Safety</span>
+            <span>Alignment</span>
+            <span>Benchmark Design</span>
+            <span>Theoretical ML</span>
+            <span>LLM Evaluation</span>
+            <span>Metacognitive Calibration</span>
+            <span>Rare-Error Auditing</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Highlights -->
-    <section class="section section--light" id="highlights">
-      <div class="container">
-        <h2 class="section__title fade-in">Highlights</h2>
-        <div class="highlights__grid fade-in">
-          <div class="highlight-card">
-            <div class="highlight-card__accent"></div>
-            <h3 class="highlight-card__title">Cambridge CS</h3>
-            <p class="highlight-card__desc">Ranked <strong>1 / 128</strong></p>
+    <section class="section timeline-section" id="education">
+      <p class="section-kicker">Education & Research Experience</p>
+      <div class="timeline reveal">
+        <article>
+          <time>2026–Present</time>
+          <div>
+            <h2>MATS Mentee</h2>
+            <p>Mentored by Yoshua Bengio, A.M. Turing Award Recipient.</p>
+            <p>Research areas: Agent Foundations, Monitoring, Control, Red-Teaming, Scalable Oversight, Dangerous Capability Evaluations.</p>
           </div>
-          <div class="highlight-card">
-            <div class="highlight-card__accent highlight-card__accent--purple"></div>
-            <h3 class="highlight-card__title"><a href="https://matsprogram.org/" target="_blank" rel="noopener">MATS</a> Mentee</h3>
-            <p class="highlight-card__desc">Mentored by <a href="https://yoshuabengio.org/" target="_blank" rel="noopener">Yoshua Bengio</a></p>
+        </article>
+        <article>
+          <time>2025–Present</time>
+          <div>
+            <h2>B.A. Computer Science</h2>
+            <p>University of Cambridge · Ranking: 1/128.</p>
+            <p>Courses: Discrete Mathematics, Continuous Mathematics, Programming, Operating Systems, Hardware, Machine Learning.</p>
           </div>
-          <div class="highlight-card">
-            <div class="highlight-card__accent highlight-card__accent--gold"></div>
-            <h3 class="highlight-card__title">NeurIPS 2024</h3>
-            <p class="highlight-card__desc">Published before university matriculation</p>
+        </article>
+        <article>
+          <time>2024</time>
+          <div>
+            <h2>Machine Learning Researcher</h2>
+            <p>Astra Fellowship — Mentored by Owain Evans, Affiliate Researcher at CHAI, UC Berkeley.</p>
+            <p>Research areas: Situational Awareness, AI Safety Evaluation, Deceptive Alignment, Self-Knowledge.</p>
           </div>
-          <div class="highlight-card">
-            <div class="highlight-card__accent highlight-card__accent--cyan"></div>
-            <h3 class="highlight-card__title"><a href="https://www.imo-official.org/" target="_blank" rel="noopener">IMO</a> Team</h3>
-            <p class="highlight-card__desc">Member of national team, 2024</p>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="section section--alt" id="education">
-      <div class="container">
-        <h2 class="section__title fade-in">Education</h2>
-        <div class="timeline fade-in">
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">2025 &ndash; Present</div>
-            <div class="timeline__content">
-              <h3 class="timeline__role">B.A. Computer Science</h3>
-              <p class="timeline__place"><a href="https://www.undergraduate.study.cam.ac.uk/courses/computer-science-ba-hons-meng" target="_blank" rel="noopener">University of Cambridge</a></p>
-              <p class="timeline__desc">Ranking: 1/128. Courses: Discrete Mathematics, Continuous Mathematics, Programming, Operating Systems, Hardware, Machine Learning.</p>
+    <section class="section publication-section" id="publications">
+      <div class="section__grid">
+        <div>
+          <p class="section-kicker">Selected Publications</p>
+          <h2>Benchmarks, calibration, and limits of auditing.</h2>
+        </div>
+      </div>
+
+      <div class="publication-list reveal">
+        <article>
+          <div class="pub-index">01</div>
+          <div>
+            <p class="pub-badge">Peer-reviewed · NeurIPS 2024</p>
+            <h3>Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs</h3>
+            <p>Rudolf Laine, Bilal Chughtai, Jan Betley, Kaivalya Hariharan, Jeremy Scheurer, Mikita Balesni, Marius Hobbhahn, Alexander Meinke, Owain Evans, <strong>Jason Z Wang</strong></p>
+            <p><em>Advances in Neural Information Processing Systems</em> 37, 64010–64118.</p>
+          </div>
+        </article>
+        <article>
+          <div class="pub-index">02</div>
+          <div>
+            <p class="pub-badge">Preprint · arXiv:2604.19809</p>
+            <h3>MIRROR: A Hierarchical Benchmark for Metacognitive Calibration in Large Language Models</h3>
+            <p><strong>Jason Z Wang</strong></p>
+            <div class="inline-links">
+              <a href="https://arxiv.org/pdf/2604.19809" target="_blank" rel="noopener">PDF</a>
+              <a href="https://arxiv.org/abs/2604.19809" target="_blank" rel="noopener">arXiv</a>
             </div>
           </div>
-        </div>
+        </article>
+        <article>
+          <div class="pub-index">03</div>
+          <div>
+            <p class="pub-badge">Preprint · arXiv:2604.12951</p>
+            <h3>The Verification Tax: Fundamental Limits of AI Auditing in the Rare-Error Regime</h3>
+            <p><strong>Jason Z Wang</strong></p>
+            <div class="inline-links">
+              <a href="https://arxiv.org/pdf/2604.12951" target="_blank" rel="noopener">PDF</a>
+              <a href="https://arxiv.org/abs/2604.12951" target="_blank" rel="noopener">arXiv</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Research Experience -->
-    <section class="section section--light" id="experience">
-      <div class="container">
-        <h2 class="section__title fade-in">Research Experience</h2>
-        <div class="timeline fade-in">
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">2026 &ndash; Present</div>
-            <div class="timeline__content">
-              <h3 class="timeline__role"><a href="https://matsprogram.org/" target="_blank" rel="noopener">MATS</a> Mentee</h3>
-              <p class="timeline__place">Mentored by <a href="https://yoshuabengio.org/" target="_blank" rel="noopener">Yoshua Bengio</a>, A.M. Turing Award Recipient</p>
-              <p class="timeline__desc">Research areas: Agent Foundations, Monitoring, Control, Red-Teaming, Scalable Oversight, Dangerous Capability Evaluations.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">2024</div>
-            <div class="timeline__content">
-              <h3 class="timeline__role">Machine Learning Researcher</h3>
-              <p class="timeline__place"><a href="https://constellation.org/programs/astra" target="_blank" rel="noopener">Astra Fellowship</a> &mdash; Mentored by <a href="https://owainevans.github.io/" target="_blank" rel="noopener">Owain Evans</a>, Affiliate Researcher at CHAI, UC Berkeley</p>
-              <p class="timeline__desc">Research areas: Situational Awareness, AI Safety Evaluation, Deceptive Alignment, Self-Knowledge.</p>
-            </div>
-          </div>
+    <section class="section projects-section" id="projects">
+      <div class="section__grid">
+        <div>
+          <p class="section-kicker">Projects</p>
+          <h2>Research threads and artifacts.</h2>
         </div>
+      </div>
+
+      <div class="project-table reveal">
+        <article>
+          <span>Benchmark</span>
+          <h3>MIRROR benchmark</h3>
+          <p>Hierarchical evaluation of metacognitive calibration in large language models.</p>
+          <a href="https://arxiv.org/abs/2604.19809" target="_blank" rel="noopener">Paper</a>
+        </article>
+        <article>
+          <span>Theory</span>
+          <h3>Verification Tax</h3>
+          <p>Fundamental limits of rare-error auditing for AI systems.</p>
+          <a href="https://arxiv.org/abs/2604.12951" target="_blank" rel="noopener">Paper</a>
+        </article>
+        <article>
+          <span>Dataset</span>
+          <h3>Situational Awareness Dataset</h3>
+          <p>Evaluation dataset for situational awareness in LLMs.</p>
+          <span class="todo">Project link TODO</span>
+        </article>
+        <article>
+          <span>Inference</span>
+          <h3>Inference-optimal scaling / Best-of-N inference</h3>
+          <p>Work on inference-time scaling and sampling tradeoffs.</p>
+          <span class="todo">Project link TODO</span>
+        </article>
+        <article>
+          <span>Agenda</span>
+          <h3>Physical world model research agenda</h3>
+          <p>Adaptive world models for compositional, open-world robot generalization.</p>
+          <span class="todo">Project link TODO</span>
+        </article>
       </div>
     </section>
 
-    <!-- Publications -->
-    <section class="section section--alt" id="publications">
-      <div class="container">
-        <h2 class="section__title fade-in">Selected Publications</h2>
-        <div class="publications__list">
-
-          <article class="pub-card fade-in">
-            <div class="pub-card__label">Peer-reviewed &middot; NeurIPS 2024</div>
-            <h3 class="pub-card__title">Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs</h3>
-            <p class="pub-card__authors">Rudolf Laine, Bilal Chughtai, Jan Betley, Kaivalya Hariharan, Jeremy Scheurer, Mikita Balesni, Marius Hobbhahn, Alexander Meinke, Owain Evans, <strong>Jason Z Wang</strong></p>
-            <p class="pub-card__venue"><em>Advances in Neural Information Processing Systems</em> 37, 64010&ndash;64118.</p>
-          </article>
-
-          <article class="pub-card fade-in">
-            <div class="pub-card__label">Preprint &middot; arXiv:2604.19809</div>
-            <h3 class="pub-card__title"><a href="https://arxiv.org/abs/2604.19809" target="_blank" rel="noopener">MIRROR: A Hierarchical Benchmark for Metacognitive Calibration in Large Language Models</a></h3>
-            <p class="pub-card__authors"><strong>Jason Z Wang</strong></p>
-            <p class="pub-card__venue">Preprint, 2026.</p>
-            <div class="pub-card__links">
-              <a href="https://arxiv.org/pdf/2604.19809" target="_blank" rel="noopener" class="btn btn--small">PDF</a>
-              <a href="https://arxiv.org/abs/2604.19809" target="_blank" rel="noopener" class="btn btn--small">arXiv</a>
-            </div>
-          </article>
-
-          <article class="pub-card fade-in">
-            <div class="pub-card__label">Preprint &middot; arXiv:2604.12951</div>
-            <h3 class="pub-card__title"><a href="https://arxiv.org/abs/2604.12951" target="_blank" rel="noopener">The Verification Tax: Fundamental Limits of AI Auditing in the Rare-Error Regime</a></h3>
-            <p class="pub-card__authors"><strong>Jason Z Wang</strong></p>
-            <p class="pub-card__venue">Preprint, 2026.</p>
-            <div class="pub-card__links">
-              <a href="https://arxiv.org/pdf/2604.12951" target="_blank" rel="noopener" class="btn btn--small">PDF</a>
-              <a href="https://arxiv.org/abs/2604.12951" target="_blank" rel="noopener" class="btn btn--small">arXiv</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section section--light" id="projects">
-      <div class="container">
-        <h2 class="section__title fade-in">Projects</h2>
-        <div class="projects__grid fade-in">
-
-          <div class="project-card">
-            <div class="project-card__tag">Benchmark</div>
-            <h3 class="project-card__title">MIRROR</h3>
-            <p class="project-card__desc">A hierarchical benchmark for metacognitive calibration in large language models.</p>
-            <div class="project-card__links">
-              <a href="https://arxiv.org/abs/2604.19809" target="_blank" rel="noopener">Paper</a>
-              <span class="project-card__todo">Code TODO</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-card__tag">Theory</div>
-            <h3 class="project-card__title">The Verification Tax</h3>
-            <p class="project-card__desc">Fundamental limits of AI auditing in the rare-error regime.</p>
-            <div class="project-card__links">
-              <a href="https://arxiv.org/abs/2604.12951" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-card__tag">Dataset</div>
-            <h3 class="project-card__title">SAD: Situational Awareness Dataset</h3>
-            <p class="project-card__desc">Large-scale dataset for evaluating situational awareness in LLMs. Published at NeurIPS 2024.</p>
-            <div class="project-card__links">
-              <span class="project-card__todo">Project link TODO</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-card__tag">Inference</div>
-            <h3 class="project-card__title">Inference-Optimal Scaling / Best-of-N</h3>
-            <p class="project-card__desc">Work on inference-time scaling, Best-of-N sampling, and evaluation tradeoffs for stronger model performance.</p>
-            <div class="project-card__links">
-              <span class="project-card__todo">Project link TODO</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-card__tag">Research Agenda</div>
-            <h3 class="project-card__title">Physical World Models</h3>
-            <p class="project-card__desc">Adaptive world models that compose mechanisms, detect novelty, and continually learn for open-world robot generalization.</p>
-            <div class="project-card__links">
-              <span class="project-card__todo">Project link TODO</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section section--dark" id="contact">
-      <div class="container">
-        <h2 class="section__title section__title--light fade-in">Get in Touch</h2>
-        <p class="contact__text fade-in">I am always happy to discuss research collaborations, ideas, and opportunities.</p>
-        <div class="contact__links fade-in">
-          <a href="mailto:jasonhearlte@gmail.com" class="contact__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span>jasonhearlte@gmail.com</span>
-          </a>
-          <a href="https://github.com/Jason-Wang313" target="_blank" rel="noopener" class="contact__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            <span>GitHub</span>
-          </a>
-          <a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&hl=en" target="_blank" rel="noopener" class="contact__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-            <span>Google Scholar</span>
-          </a>
-          <a href="cv.html" target="_blank" rel="noopener" class="contact__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            <span>CV</span>
-          </a>
+    <section class="section contact-section" id="contact">
+      <div class="contact-panel reveal">
+        <p class="section-kicker">Contact</p>
+        <h2>Research conversations, collaborations, and opportunities.</h2>
+        <div class="contact-links">
+          <a href="mailto:jasonhearlte@gmail.com">jasonhearlte@gmail.com</a>
+          <a href="https://github.com/Jason-Wang313" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="cv.html">CV</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Jason Z Wang</p>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 Jason Z Wang</p>
   </footer>
 
   <script src="js/particles.js" defer></script>
