@@ -2,7 +2,7 @@
 
 Personal academic website for Jason Z Wang, Computer Science student at the University of Cambridge.
 
-Live at: [jason-wang313.github.io](https://jason-wang313.github.io)
+Live at: [jason-z-wang.vercel.app](https://jason-z-wang.vercel.app)
 
 This `codex-version` branch uses a separate homepage layout, CSS system, and canvas animation from the baseline `main` site so it can be compared cleanly against other agent versions.
 
