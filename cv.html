@@ -6,13 +6,14 @@
   <title>Jason Z Wang — Academic CV</title>
   <style>
     :root {
-      --ink: #161616;
-      --muted: #626262;
-      --soft: #f6f3ee;
-      --line: #ddd7cc;
-      --accent: #8a3ffc;
-      --accent-dark: #4b20a8;
-      --paper: #fffdf9;
+      --ink: #1f2933;
+      --muted: #52616b;
+      --soft: #f1f4f2;
+      --line: #d4ccbd;
+      --accent: #35606f;
+      --accent-dark: #35606f;
+      --accent-soft: #f1f4f2;
+      --paper: #fbf8f1;
     }
 
     * {
@@ -21,7 +22,7 @@
 
     body {
       margin: 0;
-      background: #ece8df;
+      background: #eee8dd;
       color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.42;
@@ -83,7 +84,7 @@
     a {
       color: var(--accent-dark);
       text-decoration: none;
-      border-bottom: 1px solid rgba(138, 63, 252, 0.35);
+      border-bottom: 1px solid rgba(53, 96, 111, 0.42);
     }
 
     a:hover {
@@ -134,12 +135,12 @@
       border: 1px solid var(--line);
       border-radius: 999px;
       padding: 5px 9px;
-      color: #333;
+      color: var(--ink);
     }
 
     .highlight {
-      background: linear-gradient(135deg, rgba(138, 63, 252, 0.09), rgba(138, 63, 252, 0.02));
-      border: 1px solid rgba(138, 63, 252, 0.18);
+      background: linear-gradient(135deg, rgba(53, 96, 111, 0.09), rgba(53, 96, 111, 0.025));
+      border: 1px solid rgba(53, 96, 111, 0.18);
       border-radius: 16px;
       padding: 16px 16px 14px;
       margin-bottom: 12px;
@@ -191,8 +192,8 @@
     }
 
     .focus-card {
-      background: #faf6ef;
-      border: 1px solid rgba(138, 63, 252, 0.22);
+      background: var(--accent-soft, #f1f4f2);
+      border: 1px solid rgba(53, 96, 111, 0.22);
       border-left: 4px solid var(--accent);
       border-radius: 0 18px 18px 0;
       padding: 18px 20px;
@@ -204,7 +205,7 @@
       font-weight: 600;
       color: var(--accent-dark);
       background: transparent;
-      border-bottom: 1px solid rgba(138, 63, 252, 0.35);
+      border-bottom: 1px solid rgba(53, 96, 111, 0.42);
       border-radius: 0;
       padding: 0;
     }
@@ -213,7 +214,7 @@
       position: relative;
       padding: 18px 18px 17px 22px;
       border-left: 3px solid var(--accent);
-      background: #fff;
+      background: #fefcf7;
       box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
       border-radius: 0 14px 14px 0;
       margin-bottom: 16px;
@@ -237,7 +238,7 @@
 
     .authors {
       font-size: 14px;
-      color: #343434;
+      color: var(--ink);
       margin-bottom: 5px;
     }
 
@@ -399,7 +400,7 @@
         <section class="section">
           <h2 class="section-title">Research Direction</h2>
           <div class="focus-card">
-            <p class="desc" style="font-size: 14.8px; color: #343434;">
+            <p class="desc" style="font-size: 14.8px; color: var(--ink);">
               I have moved from earlier work in AI safety, alignment, benchmark design, and theoretical ML toward a <span class="key">new research agenda</span> centered on <span class="key">physical world models</span> and <span class="key">embodied intelligence</span>. My long-term research goal is to build <span class="key">adaptive physical world models</span> that can <strong>compose known mechanisms</strong>, <strong>identify missing physical concepts</strong>, <strong>actively gather evidence</strong>, and <strong>continually update</strong> for <span class="key">robust open-world robot generalization</span>.
             </p>
           </div>
