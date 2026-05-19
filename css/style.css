@@ -307,6 +307,21 @@ strong {
   line-height: 1.15;
 }
 
+.profile-portrait {
+  width: min(100%, 310px);
+}
+
+.profile-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 34%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(56, 43, 26, 0.12);
+}
+
 .prose p,
 .agenda p {
   margin: 0 0 15px;
