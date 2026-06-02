@@ -331,7 +331,7 @@ strong {
 
 .highlights {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   margin-top: 56px;
   border: 1px solid var(--line);
@@ -339,6 +339,7 @@ strong {
 }
 
 .highlights article {
+  min-width: 0;
   min-height: 132px;
   padding: 22px;
   background: var(--panel);
@@ -588,7 +589,7 @@ strong {
 
 @media (max-width: 1120px) {
   .highlights {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
