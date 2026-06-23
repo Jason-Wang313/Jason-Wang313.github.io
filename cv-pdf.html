@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Z Wang - PDF CV</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #52616b;
+      --quiet: #71808a;
+      --line: #d4ccbd;
+      --soft-line: #ebe4d8;
+      --accent: #35606f;
+      --accent-soft: #f1f4f2;
+      --paper: #fbf8f1;
+    }
+
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.3pt;
+      line-height: 1.36;
+    }
+
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 0.45pt solid rgba(53, 96, 111, 0.42);
+    }
+
+    .sheet {
+      width: 8.5in;
+      height: 10.86in;
+      margin: 0 auto;
+      padding: 0.58in 0.66in 0.54in;
+      background: var(--paper);
+      overflow: hidden;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: 1fr 61mm;
+      gap: 12mm;
+      align-items: start;
+      padding-bottom: 5.8mm;
+      border-bottom: 1.35pt solid var(--ink);
+    }
+
+    .name {
+      margin: 0 0 2.4mm;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25pt;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    .subtitle {
+      color: var(--accent);
+      font-size: 9.2pt;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 4.1mm;
+    }
+
+    .summary {
+      max-width: 118mm;
+      margin: 0;
+      color: #1f2937;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 10.8pt;
+      line-height: 1.42;
+    }
+
+    .contact {
+      color: var(--muted);
+      font-size: 8.7pt;
+      line-height: 1.55;
+      text-align: right;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 44mm 1fr;
+      gap: 10mm;
+      margin-top: 6.2mm;
+    }
+
+    .side {
+      border-right: 0.8pt solid var(--line);
+      padding-right: 7mm;
+    }
+
+    .section {
+      margin: 0 0 5.4mm;
+    }
+
+    .section.tight {
+      margin-bottom: 4.7mm;
+    }
+
+    .section-title {
+      margin: 0 0 2.6mm;
+      padding-bottom: 1.6mm;
+      border-bottom: 0.8pt solid var(--line);
+      color: var(--accent);
+      font-size: 8pt;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .side .section-title {
+      color: var(--ink);
+    }
+
+    .tag-list,
+    .plain-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tag-list li {
+      display: block;
+      padding: 0.75mm 0;
+      border-bottom: 0.45pt solid var(--soft-line);
+      color: #1f2937;
+      font-size: 8.9pt;
+    }
+
+    .tag-list li:last-child,
+    .plain-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .plain-list li {
+      margin: 0 0 1.65mm;
+      color: var(--muted);
+      font-size: 8.9pt;
+    }
+
+    .plain-list strong {
+      display: block;
+      color: var(--ink);
+      font-size: 9.4pt;
+      margin-bottom: 0.4mm;
+    }
+
+    .callout {
+      padding: 4mm 4.4mm;
+      border-left: 2.3pt solid var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .callout p {
+      margin: 0;
+      color: #1f2937;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 10.15pt;
+      line-height: 1.42;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 23mm 1fr;
+      gap: 5mm;
+      margin-bottom: 5.2mm;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .date {
+      color: var(--quiet);
+      font-size: 8.4pt;
+      font-weight: 700;
+      text-align: right;
+      padding-top: 0.55mm;
+      white-space: nowrap;
+    }
+
+    .role {
+      margin: 0 0 0.8mm;
+      color: var(--ink);
+      font-size: 11pt;
+      font-weight: 800;
+      line-height: 1.22;
+    }
+
+    .place {
+      margin: 0 0 1mm;
+      color: #374151;
+      font-size: 9.5pt;
+      line-height: 1.31;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 9.1pt;
+      line-height: 1.36;
+    }
+
+    .pub {
+      position: relative;
+      margin-bottom: 5.4mm;
+      padding-left: 4mm;
+      border-left: 1.5pt solid var(--line);
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .pub.featured {
+      border-left-color: var(--accent);
+    }
+
+    .pub-label {
+      margin: 0 0 0.9mm;
+      color: var(--accent);
+      font-size: 7.9pt;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .pub-title {
+      margin: 0 0 1.1mm;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 11pt;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .authors,
+    .venue,
+    .links {
+      color: var(--muted);
+      font-size: 8.9pt;
+      line-height: 1.34;
+    }
+
+    .links {
+      margin-top: 1.5mm;
+      display: flex;
+      gap: 3.8mm;
+      flex-wrap: wrap;
+      font-weight: 700;
+    }
+
+    .award-list {
+      margin: 0;
+      padding-left: 4.5mm;
+      color: var(--muted);
+      font-size: 9.2pt;
+    }
+
+    .award-list li {
+      margin-bottom: 2mm;
+      padding-left: 0.5mm;
+    }
+
+    .page-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8mm;
+      margin-bottom: 7mm;
+      padding-bottom: 2.8mm;
+      border-bottom: 1.1pt solid var(--ink);
+    }
+
+    .page-kicker h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17.5pt;
+      line-height: 1;
+    }
+
+    .page-kicker span {
+      color: var(--muted);
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm;
+    }
+
+    @media print {
+      html,
+      body {
+        background: white;
+      }
+
+      .sheet {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="masthead">
+      <div>
+        <h1 class="name">Jason Z Wang</h1>
+        <div class="subtitle"><a href="https://www.undergraduate.study.cam.ac.uk/courses/computer-science-ba-hons-meng">Computer Science, University of Cambridge</a></div>
+        <p class="summary">
+          Researching adaptive physical world models for embodied intelligence: systems that compose known mechanisms, detect incomplete understanding, gather evidence, learn new physical components, and update without forgetting.
+        </p>
+      </div>
+      <div class="contact">
+        Cambridge, United Kingdom<br />
+        <a href="https://jason-z-wang.vercel.app">jason-z-wang.vercel.app</a><br />
+        <a href="mailto:jasonhearlte@gmail.com">jasonhearlte@gmail.com</a><br />
+        <a href="https://github.com/Jason-Wang313">github.com/Jason-Wang313</a><br />
+        <a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&amp;hl=en">Google Scholar</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="side">
+        <section class="section">
+          <h2 class="section-title">Future Direction</h2>
+          <ul class="tag-list">
+            <li>Physical World Models</li>
+            <li>Embodied AI</li>
+            <li>Robot Learning</li>
+            <li>Compositional Generalization</li>
+            <li>Object-Centric Representations</li>
+            <li>Energy-Based Inference</li>
+            <li>Test-Time Planning</li>
+            <li>Novelty Detection</li>
+            <li>Active Exploration</li>
+            <li>Continual Learning</li>
+            <li>Sim-to-Real Adaptation</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Previous Work</h2>
+          <ul class="tag-list">
+            <li>AI Safety</li>
+            <li>Alignment</li>
+            <li>Benchmark Design</li>
+            <li>Theoretical ML</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Highlights</h2>
+          <ul class="plain-list">
+            <li><strong>Cambridge CS</strong>Ranked 1/128.</li>
+            <li><strong><a href="https://www.mll.lab.northwestern.edu/">Visiting Researcher</a></strong>Northwestern MLL Lab under <a href="https://jameskrw.github.io/">Kangrui Wang</a>.</li>
+            <li><strong>IMO Team</strong>National team member, 2024.</li>
+          </ul>
+        </section>
+
+      </aside>
+
+      <main>
+        <section class="section">
+          <h2 class="section-title">Research Direction</h2>
+          <div class="callout">
+            <p>
+              I have moved from earlier work in AI safety, alignment, benchmark design, and theoretical ML toward a new research agenda centered on physical world models and embodied intelligence. My long-term goal is to build adaptive physical world models that compose known mechanisms, identify missing physical concepts, actively gather evidence, and continually update for robust open-world robot generalization.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="entry">
+            <div class="date">2025-Present</div>
+            <div>
+              <p class="role">B.A. Computer Science</p>
+              <p class="place"><a href="https://www.undergraduate.study.cam.ac.uk/?ucam-ref=global-header">University of Cambridge</a></p>
+              <p class="desc">Ranking: 1/128. Courses: Discrete Mathematics, Continuous Mathematics, Programming, Operating Systems, Hardware, Machine Learning.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Research Experience</h2>
+          <div class="entry">
+            <div class="date">2026-Present</div>
+            <div>
+              <p class="role">Visiting Researcher</p>
+              <p class="place"><a href="https://www.mll.lab.northwestern.edu/">Manling Li's MLL Lab</a>, Northwestern University; working under <a href="https://jameskrw.github.io/">Kangrui Wang</a>.</p>
+              <p class="desc">Research areas: embodied agents, multimodal reasoning, world-model learning, and open-world robot generalization.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </article>
+
+  <article class="sheet">
+    <header class="page-kicker">
+      <h1>Jason Z Wang</h1>
+      <span>Selected Publications, Awards, and Links</span>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Selected Publications</h2>
+
+      <article class="pub featured">
+        <p class="pub-label">NeurIPS under review / arXiv:2604.19809</p>
+        <p class="pub-title"><a href="https://arxiv.org/pdf/2604.19809">MIRROR: A Hierarchical Benchmark for Metacognitive Calibration in Large Language Models</a></p>
+        <div class="authors"><strong>Jason Z Wang</strong></div>
+        <div class="venue">Under review at NeurIPS, 2026.</div>
+        <div class="links">
+          <a href="https://arxiv.org/pdf/2604.19809">PDF</a>
+          <a href="https://arxiv.org/abs/2604.19809">arXiv</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <p class="pub-label">NeurIPS under review / arXiv:2604.12951</p>
+        <p class="pub-title"><a href="https://arxiv.org/pdf/2604.12951">The Verification Tax: Fundamental Limits of AI Auditing in the Rare-Error Regime</a></p>
+        <div class="authors"><strong>Jason Z Wang</strong></div>
+        <div class="venue">Under review at NeurIPS, 2026.</div>
+        <div class="links">
+          <a href="https://arxiv.org/pdf/2604.12951">PDF</a>
+          <a href="https://arxiv.org/abs/2604.12951">arXiv</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <p class="pub-label">NeurIPS under review / Zenodo DOI: 10.5281/zenodo.20513863</p>
+        <p class="pub-title"><a href="https://zenodo.org/records/20513863/preview/stereology.pdf?include_deleted=0">The Evaluation Blind Spot: A Stereological Theory of Benchmark Coverage for Large Language Models</a></p>
+        <div class="authors"><strong>Jason Z Wang</strong></div>
+        <div class="venue">Under review at NeurIPS, 2026.</div>
+        <div class="links">
+          <a href="https://zenodo.org/records/20513863/preview/stereology.pdf?include_deleted=0">PDF</a>
+          <a href="https://zenodo.org/records/20513863">Zenodo</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <p class="pub-label">NeurIPS under review / Zenodo DOI: 10.5281/zenodo.20514339</p>
+        <p class="pub-title"><a href="https://zenodo.org/records/20514339/preview/errorquake.pdf?include_deleted=0">ERRORQUAKE: Heavy-Tailed Error Severity Distributions in Open-Weight Large Language Models</a></p>
+        <div class="authors"><strong>Jason Z Wang</strong></div>
+        <div class="venue">Under review at NeurIPS, 2026.</div>
+        <div class="links">
+          <a href="https://zenodo.org/records/20514339/preview/errorquake.pdf?include_deleted=0">PDF</a>
+          <a href="https://zenodo.org/records/20514339">Zenodo</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="two-col">
+      <section class="section">
+        <h2 class="section-title">Awards &amp; Honors</h2>
+        <ul class="award-list">
+          <li>Member of national IMO team, 2024.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">SKILLSET</h2>
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>PyTorch</li>
+          <li>Theoretical ML</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">Contact</h2>
+      <div class="two-col">
+        <ul class="plain-list">
+          <li><strong>Website</strong><a href="https://jason-z-wang.vercel.app">jason-z-wang.vercel.app</a></li>
+          <li><strong>Email</strong><a href="mailto:jasonhearlte@gmail.com">jasonhearlte@gmail.com</a></li>
+        </ul>
+        <ul class="plain-list">
+          <li><strong>GitHub</strong><a href="https://github.com/Jason-Wang313">github.com/Jason-Wang313</a></li>
+          <li><strong>Google Scholar</strong><a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&amp;hl=en">Profile link</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </article>
+</body>
+</html>
