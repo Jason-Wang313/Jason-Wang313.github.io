@@ -49,13 +49,12 @@
       <p class="hero__subtitle">Computer Science · <span>University of Cambridge</span></p>
       <p class="hero__rotation">
         <span>Research interests in</span>
-        <strong id="rotating-interest">Physical World Models</strong>
+        <strong id="rotating-interest">Energy-Based Models</strong>
       </p>
 
       <div class="hero__actions" aria-label="Profile links">
         <a class="action action--primary" href="cv.html">CV</a>
         <a class="action" href="https://github.com/Jason-Wang313" target="_blank" rel="noopener">GitHub</a>
-        <a class="action" href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a class="action" href="mailto:jasonhearlte@gmail.com">Email</a>
       </div>
     </div>
@@ -74,8 +73,7 @@
           <img src="assets/headshot.jpeg" alt="Jason Z Wang headshot">
         </div>
         <div class="prose reveal">
-          <p>I am a Computer Science student at the <a href="https://www.undergraduate.study.cam.ac.uk/?ucam-ref=global-header" target="_blank" rel="noopener">University of Cambridge</a> interested in adaptive physical world models, embodied AI, compositional generalization, novelty detection, active exploration, continual learning, and sim-to-real robot adaptation.</p>
-          <p>My research interests have fully shifted toward physical world models and embodied intelligence, after earlier work in AI safety, alignment, benchmark design, and theoretical ML. I am ranked 1/128 in <a href="https://www.undergraduate.study.cam.ac.uk/courses/computer-science-ba-hons-meng" target="_blank" rel="noopener">Cambridge Computer Science</a>.</p>
+          <p>I study computer science and work on image restoration as a research intern at the <a href="https://multimedia.sjtu.edu.cn/">SJTU Multimedia Lab</a> under <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/">Prof. Xiaohong Liu</a>.</p>
         </div>
       </div>
 
@@ -85,10 +83,6 @@
           <strong>Ranked 1/128</strong>
         </article>
         <article>
-          <span>Visiting Researcher</span>
-          <strong><a href="https://www.mll.lab.northwestern.edu/" target="_blank" rel="noopener">Northwestern MLL Lab</a> · <a href="https://jameskrw.github.io/" target="_blank" rel="noopener">Kangrui Wang</a></strong>
-        </article>
-        <article>
           <span><a href="https://www.imo-official.org/" target="_blank" rel="noopener">International Mathematical Olympiad</a></span>
           <strong>Member of national IMO team, 2024</strong>
         </article>
@@ -96,43 +90,14 @@
     </section>
 
     <section class="section research-section" id="research">
-      <div class="section__grid">
-        <div>
-          <p class="section-kicker">Research Agenda</p>
-          <h2>Composing mechanisms, detecting novelty, and learning from evidence.</h2>
-        </div>
-        <div class="agenda reveal">
-          <p>My long-term research goal is to build adaptive physical world models that can compose known mechanisms, identify missing physical concepts, actively gather evidence, and continually update for robust open-world robot generalization.</p>
-        </div>
-      </div>
-
-      <div class="research-columns reveal">
-        <article>
-          <h3>Current Interests</h3>
-          <div class="tag-list">
-            <span>Physical World Models</span>
-            <span>Embodied AI</span>
-            <span>Robot Learning</span>
-            <span>Compositional Generalization</span>
-            <span>Object-Centric Representations</span>
-            <span>Energy-Based Inference</span>
-            <span>Inference-Time Planning</span>
-            <span>Novelty/OOD Detection</span>
-            <span>Active Exploration</span>
-            <span>Continual Learning</span>
-            <span>Sim-to-Real Adaptation</span>
-          </div>
-        </article>
-        <article>
-          <h3>Previous Work</h3>
-          <div class="tag-list tag-list--quiet">
-            <span>AI Safety</span>
-            <span>Alignment</span>
-            <span>Benchmark Design</span>
-            <span>Theoretical ML</span>
-            <span>LLM Evaluation</span>
-          </div>
-        </article>
+      <h2>Research Interests</h2>
+      <div class="tag-list reveal">
+        <span>Energy-Based Models</span>
+        <span>Robotics</span>
+        <span>Computer Vision</span>
+        <span>Model Architecture</span>
+        <span>Reasoning</span>
+        <span>Compositional Generalization</span>
       </div>
     </section>
 
@@ -150,9 +115,9 @@
         <article>
           <time>2026–Present</time>
           <div>
-            <h2>Visiting Researcher</h2>
-            <p><a href="https://www.mll.lab.northwestern.edu/" target="_blank" rel="noopener">Manling Li's MLL Lab</a>, Northwestern University — working under <a href="https://jameskrw.github.io/" target="_blank" rel="noopener">Kangrui Wang</a>.</p>
-            <p>Research areas: embodied agents, multimodal reasoning, world-model learning, and open-world robot generalization.</p>
+            <h2>Research Intern</h2>
+            <p><a href="https://multimedia.sjtu.edu.cn/">SJTU Multimedia Lab</a>, Shanghai Jiao Tong University. Advised by <a href="https://jhc.sjtu.edu.cn/~xiaohongliu/">Prof. Xiaohong Liu</a>.</p>
+            <p>Research on vision-language models and multi-expert image restoration.</p>
           </div>
         </article>
       </div>
@@ -162,13 +127,21 @@
       <div class="section__grid">
         <div>
           <p class="section-kicker">Selected Publications</p>
-          <h2>Benchmarks, calibration, and limits of auditing.</h2>
+          <h2>Image restoration and machine learning.</h2>
         </div>
       </div>
 
       <div class="publication-list reveal">
         <article>
           <div class="pub-index">01</div>
+          <div>
+            <p class="pub-badge">Preprint</p>
+            <h3><a href="papers/selective-routing-image-restoration.pdf">Selective Routing of Restoration Experts for Five Image Degradations</a></h3>
+            <div class="pub-links"><a href="papers/selective-routing-image-restoration.pdf">PDF</a></div>
+          </div>
+        </article>
+        <article>
+          <div class="pub-index">02</div>
           <div>
             <p class="pub-badge">NeurIPS under review · arXiv:2604.19809</p>
             <h3><a href="https://arxiv.org/pdf/2604.19809" target="_blank" rel="noopener">MIRROR: A Hierarchical Benchmark for Metacognitive Calibration in Large Language Models</a></h3>
@@ -180,7 +153,7 @@
           </div>
         </article>
         <article>
-          <div class="pub-index">02</div>
+          <div class="pub-index">03</div>
           <div>
             <p class="pub-badge">NeurIPS under review · arXiv:2604.12951</p>
             <h3><a href="https://arxiv.org/pdf/2604.12951" target="_blank" rel="noopener">The Verification Tax: Fundamental Limits of AI Auditing in the Rare-Error Regime</a></h3>
@@ -192,7 +165,7 @@
           </div>
         </article>
         <article>
-          <div class="pub-index">03</div>
+          <div class="pub-index">04</div>
           <div>
             <p class="pub-badge">NeurIPS under review · Zenodo DOI: 10.5281/zenodo.20513863</p>
             <h3><a href="https://zenodo.org/records/20513863/preview/stereology.pdf?include_deleted=0" target="_blank" rel="noopener">The Evaluation Blind Spot: A Stereological Theory of Benchmark Coverage for Large Language Models</a></h3>
@@ -204,7 +177,7 @@
           </div>
         </article>
         <article>
-          <div class="pub-index">04</div>
+          <div class="pub-index">05</div>
           <div>
             <p class="pub-badge">NeurIPS under review · Zenodo DOI: 10.5281/zenodo.20514339</p>
             <h3><a href="https://zenodo.org/records/20514339/preview/errorquake.pdf?include_deleted=0" target="_blank" rel="noopener">ERRORQUAKE: Heavy-Tailed Error Severity Distributions in Open-Weight Large Language Models</a></h3>
@@ -225,7 +198,6 @@
         <div class="contact-links">
           <a href="mailto:jasonhearlte@gmail.com">jasonhearlte@gmail.com</a>
           <a href="https://github.com/Jason-Wang313" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://scholar.google.co.uk/citations?user=YOpva8IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
           <a href="cv.html">CV</a>
         </div>
       </div>

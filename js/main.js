@@ -1,15 +1,11 @@
 (function () {
   const interests = [
-    'Physical World Models',
-    'Embodied AI',
-    'Robot Learning',
+    'Energy-Based Models',
+    'Robotics',
+    'Computer Vision',
+    'Model Architecture',
+    'Reasoning',
     'Compositional Generalization',
-    'Object-Centric Representations',
-    'Energy-Based Inference',
-    'Novelty Detection',
-    'Active Exploration',
-    'Continual Learning',
-    'Sim-to-Real Adaptation',
   ];
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
