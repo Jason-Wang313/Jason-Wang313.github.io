@@ -1,8 +1,8 @@
 # Jason Z Wang Academic Website
 
-Personal academic website for Jason Z Wang, Computer Science student at the University of Cambridge.
+Personal academic website for Jason Z Wang, Electrical Engineering student at the University of Birmingham.
 
-Live at: [jason-z-wang.vercel.app](https://jason-z-wang.vercel.app)
+Live at: [jason-wang313.github.io](https://jason-wang313.github.io)
 
 This `codex-version` branch uses a separate homepage layout, CSS system, and canvas animation from the baseline `main` site so it can be compared cleanly against other agent versions.
 

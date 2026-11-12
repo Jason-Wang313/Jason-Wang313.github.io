@@ -5,7 +5,7 @@
     'Computer Vision',
     'Model Architecture',
     'Reasoning',
-    'Compositional Generalization',
+    'Generalization',
   ];
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
