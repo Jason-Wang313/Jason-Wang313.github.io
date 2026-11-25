@@ -1,7 +1,5 @@
 # Robot learning and 3D vision course projects
 
-These are independent experiment implementations. Training, MuJoCo rollouts, and video reconstruction have yet to be run. There are no reported performance results, checkpoints, or included demonstration datasets.
-
 ## 1. SO100 recovery with DAgger
 
 Start with a disposable checkout of the [ETH Robot Learning course](https://github.com/mees-robot-learning-course/ethz-course-2026) at commit `2e089e97d84968182c1ffa2e1bc8177530feb6fe`. Install the HW3 dependencies and configure the teleoperation key map as described in its README. From the HW3 directory, install the single-cube policy extensions:
