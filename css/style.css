@@ -365,6 +365,7 @@ strong {
 .highlights a,
 .timeline a,
 #coursework a,
+#writing a,
 .publication-list a,
 .contact-links a {
   color: #0f766e;
@@ -376,6 +377,7 @@ strong {
 .highlights a:hover,
 .timeline a:hover,
 #coursework a:hover,
+#writing a:hover,
 .publication-list a:hover,
 .contact-links a:hover {
   color: #bd7b2f;
